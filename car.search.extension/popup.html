@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vehicle Search</title>
+    <style>
+        html,
+        body {
+            display: flex;
+            justify-content: space-evenly
+        }
+
+        .newUsed {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%
+        }
+
+        .newUsed>div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .submitButton {
+            border-radius: 5px;
+            color: white;
+            background-color: green;
+            width: 100%;
+            height: 3em;
+            justify-content: center;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        .priceSort {
+            display: none;
+        }
+
+        .sortExpand {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h3>Buick/GMC search</h3>
+        <input type="text" id="searchBox" value="">
+        <hr>
+        <div class="newUsed">
+            <div>
+                <input type="checkbox" id="newBox">
+                <h3>New</h3>
+            </div>
+            <div>
+                <input type="checkbox" id="usedBox">
+                <h3>Used</h3>
+            </div>
+        </div>
+        <hr>
+            <div class="sortOptions">
+                <div>
+                    <p class="sortExpand" id="sortExpand">
+                        +</p>
+                </div>
+                <div class="priceSort" id="priceSort">
+                    <div>
+                        <input type="checkbox" id="lowToHigh">
+                        <h3>Low to High</h3>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="highToLow">
+                        <h3>High to Low</h3>
+                    </div>
+                </div>
+            </div>        
+        <hr>
+        <select id="dealershipSelector">
+            <option value="www.williamsbuickgmc.com">Williams</option>
+            <option value="www.clickliberty.com">Liberty</option>
+            <option value="www.randymariongmc.net">Randy Marion</option>
+
+        </select>
+        <hr>
+        <input type="submit" value="Submit" id="searchButton" class="submitButton">
+    </form>
+
+
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
